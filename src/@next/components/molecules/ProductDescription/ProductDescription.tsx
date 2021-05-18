@@ -23,10 +23,10 @@ export const ProductDescription: React.FC<IProps> = ({
       <S.Tabs>
         <S.TabTitle
           active={activeTab === TABS.DESCRIPTION}
-          onMouseEnter={evt => {
-            evt.stopPropagation();
-            setActiveTab(TABS.DESCRIPTION);
-          }}
+          // onMouseEnter={evt => {
+          //   evt.stopPropagation();
+          //   setActiveTab(TABS.DESCRIPTION);
+          // }}
           onClick={evt => {
             evt.stopPropagation();
             setActiveTab(TABS.DESCRIPTION);
@@ -36,10 +36,10 @@ export const ProductDescription: React.FC<IProps> = ({
         </S.TabTitle>
         <S.TabTitle
           active={activeTab === TABS.ATTRIBUTES}
-          onMouseEnter={evt => {
-            evt.stopPropagation();
-            setActiveTab(TABS.ATTRIBUTES);
-          }}
+          // onMouseEnter={evt => {
+          //   evt.stopPropagation();
+          //   setActiveTab(TABS.ATTRIBUTES);
+          // }}
           onClick={evt => {
             evt.stopPropagation();
             setActiveTab(TABS.ATTRIBUTES);
