@@ -20,14 +20,14 @@
   .react-select {
     &__control {
       border-radius: 0;
-      border-color: $blue;
+      border-color: $primary;
 
       &:hover {
-        border-color: $blue;
+        border-color: $primary;
       }
 
       &--is-focused {
-        box-shadow: 0 0 0 1px $blue;
+        box-shadow: 0 0 0 1px $primary;
       }
     }
 
@@ -58,8 +58,8 @@
     &__menu {
       margin-top: 0;
       border-radius: 0;
-      box-shadow: 0 0 0 1px $blue;
-      border: 1px solid $blue;
+      box-shadow: 0 0 0 1px $primary;
+      border: 1px solid $primary;
       z-index: 2;
     }
 

@@ -2,7 +2,7 @@
 $base-font-color: #323232;
 $black: #000;
 $blue-dark: #190c4e;
-$blue: #fe9c9b;
+$primary: #fe9c9b;
 $gray-dark: #7d7d7d;
 $gray-light: #f6f6f6;
 $gray: #c4c4c4;
@@ -12,7 +12,7 @@ $turquoise-dark: #55c4b3;
 $turquoise-light: #f1f5f5;
 $turquoise: #51e9d2;
 $white: #fff;
-$blue-overlay: rgba($blue, 0.15);
+$blue-overlay: rgba($primary, 0.15);
 $autofillColor: rgb(250, 255, 189);
 $autofillColorSelected: rgb(232, 240, 254);
 $darkGreen: #06847b;

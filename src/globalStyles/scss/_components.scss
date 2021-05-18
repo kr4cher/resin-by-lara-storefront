@@ -17,7 +17,7 @@
         top: $spacer * 1.25;
         left: $spacer;
         margin: auto;
-        box-shadow: 0 0 0 1px $blue;
+        box-shadow: 0 0 0 1px $primary;
         border: 2px solid $white;
         background-color: $white;
       }
@@ -25,7 +25,7 @@
 
     &--selected {
       label::before {
-        background-color: $blue;
+        background-color: $primary;
       }
     }
 

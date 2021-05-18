@@ -37,16 +37,16 @@ button.button {
 
   &.secondary {
     background-color: $white;
-    box-shadow: inset 0px 0px 0px 3px $blue;
-    border-left: 1px solid $blue;
-    border-right: 1px solid $blue;
+    box-shadow: inset 0px 0px 0px 3px $primary;
+    border-left: 1px solid $primary;
+    border-right: 1px solid $primary;
 
     * {
-      color: $blue;
+      color: $primary;
     }
 
     &:hover {
-      background-color: $blue;
+      background-color: $primary;
 
       * {
         color: $white;
