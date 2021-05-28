@@ -1,11 +1,14 @@
 {
-  "name": "saleor-site",
+  "name": "resin-by-lara-storefront",
   "version": "2.11.0",
   "private": true,
   "author": "Mirumee",
-  "homepage": "https://getsaleor.com/",
+  "homepage": "https://resin-by-lara.eu.org/",
+  "repository": {
+    "url": "https://github.com/kr4cher/resin-by-lara-storefront"
+  },
   "main": "dist/index.js",
-  "browserslist": "last 2 versions",
+  "browserslist": ["last 2 versions"],
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "@lhci/cli": "^0.4.1",
@@ -183,8 +186,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run build"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
