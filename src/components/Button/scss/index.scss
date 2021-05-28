@@ -1,7 +1,7 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 button.button {
-  background-color: $turquoise;
+  background-color: $secondary;
   transform: $button-transform;
   padding: $button-padding;
   border: none;
@@ -28,7 +28,7 @@ button.button {
   }
 
   &:hover {
-    background-color: $turquoise-dark;
+    background-color: $secondary-dark;
   }
 
   &:active {
@@ -54,7 +54,7 @@ button.button {
     }
 
     &:active {
-      background-color: $blue-dark;
+      background-color: $primary-dark;
     }
   }
 

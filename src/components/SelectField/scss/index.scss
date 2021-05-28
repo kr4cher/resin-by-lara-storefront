@@ -13,7 +13,7 @@
   &--grey {
     .input__label,
     .react-select__control {
-      background-color: $turquoise-light;
+      background-color: $secondary-light;
     }
   }
 
@@ -98,7 +98,7 @@
       &--is-selected,
       &--is-focused &--is-selected,
       &:active {
-        background-color: $turquoise-light;
+        background-color: $secondary-light;
         color: $base-font-color;
       }
     }
