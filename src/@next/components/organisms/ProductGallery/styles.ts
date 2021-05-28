@@ -18,7 +18,7 @@ export const Thumbnail = styled.div<{ activeThumbnail: boolean }>`
       ? props.theme.colors.thumbnailBorder
       : "transparent"};
   justify-content: center;
-  height: 100px;
+  //height: 100px;
   overflow: hidden;
   img {
     width: 100%;
@@ -76,7 +76,7 @@ export const ThumbnailList = styled.div`
 export const Preview = styled.div`
   grid-area: preview;
   width: auto;
-  max-height: 560px;
+  //max-height: 560px;
   overflow: hidden;
   img {
     width: 100%;

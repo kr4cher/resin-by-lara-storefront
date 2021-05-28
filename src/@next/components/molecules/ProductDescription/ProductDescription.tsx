@@ -17,16 +17,13 @@ export const ProductDescription: React.FC<IProps> = ({
   attributes,
 }: IProps) => {
   const [activeTab, setActiveTab] = React.useState<TABS>(TABS.DESCRIPTION);
+  const showAttributesTab: boolean = !!attributes && attributes.length > 0;
 
   return (
     <S.Wrapper>
       <S.Tabs>
         <S.TabTitle
           active={activeTab === TABS.DESCRIPTION}
-          // onMouseEnter={evt => {
-          //   evt.stopPropagation();
-          //   setActiveTab(TABS.DESCRIPTION);
-          // }}
           onClick={evt => {
             evt.stopPropagation();
             setActiveTab(TABS.DESCRIPTION);
@@ -34,19 +31,18 @@ export const ProductDescription: React.FC<IProps> = ({
         >
           <FormattedMessage defaultMessage="DESCRIPTION" />
         </S.TabTitle>
-        <S.TabTitle
-          active={activeTab === TABS.ATTRIBUTES}
-          // onMouseEnter={evt => {
-          //   evt.stopPropagation();
-          //   setActiveTab(TABS.ATTRIBUTES);
-          // }}
-          onClick={evt => {
-            evt.stopPropagation();
-            setActiveTab(TABS.ATTRIBUTES);
-          }}
-        >
-          <FormattedMessage defaultMessage="ATTRIBUTES" />
-        </S.TabTitle>
+
+        {showAttributesTab && (
+          <S.TabTitle
+            active={activeTab === TABS.ATTRIBUTES}
+            onClick={evt => {
+              evt.stopPropagation();
+              setActiveTab(TABS.ATTRIBUTES);
+            }}
+          >
+            <FormattedMessage defaultMessage="ATTRIBUTES" />
+          </S.TabTitle>
+        )}
       </S.Tabs>
       {activeTab === TABS.DESCRIPTION &&
         (descriptionJson ? (
@@ -54,7 +50,7 @@ export const ProductDescription: React.FC<IProps> = ({
         ) : (
           <p>{description}</p>
         ))}
-      {activeTab === TABS.ATTRIBUTES && (
+      {showAttributesTab && activeTab === TABS.ATTRIBUTES && (
         <S.AttributeList>
           {attributes &&
             attributes.map((attribute, index) => (

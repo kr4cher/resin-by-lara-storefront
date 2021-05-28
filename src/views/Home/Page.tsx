@@ -42,27 +42,24 @@ const Page: React.FC<{
             : null
         }
       >
-        <div className="home-page__hero-text">
-          <div>
-            <span className="home-page__hero__title">
-              <h1>
-                <FormattedMessage defaultMessage="Final reduction" />
-              </h1>
-            </span>
-          </div>
-          <div>
-            <span className="home-page__hero__title">
-              <h1>
-                <FormattedMessage defaultMessage="Up to 70% off sale" />
-              </h1>
-            </span>
-          </div>
-        </div>
-        <div className="home-page__hero-action">
-          {loading && !categories ? (
-            <Loader />
-          ) : (
-            categoriesExist() && (
+        {loading && !categories ? (
+          <figure>
+            <div className="home-page__hero-text">
+              <div>
+                <span className="home-page__hero__title">
+                  <h1>
+                    <FormattedMessage defaultMessage="Nur einen Moment, der Shop steht sofort bereit :)" />
+                  </h1>
+                </span>
+              </div>
+            </div>
+            <div className="home-page__hero-action">
+              <Loader />
+            </div>
+          </figure>
+        ) : (
+          categoriesExist() && (
+            <div className="home-page__hero-action">
               <Link
                 to={generateCategoryUrl(
                   categories.edges[0].node.id,
@@ -73,9 +70,9 @@ const Page: React.FC<{
                   <FormattedMessage defaultMessage="Shop sale" />
                 </Button>
               </Link>
-            )
-          )}
-        </div>
+            </div>
+          )
+        )}
       </div>
       <ProductsFeatured
         title={intl.formatMessage({ defaultMessage: "Featured" })}
